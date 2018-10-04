@@ -77,7 +77,7 @@ add_filter('wf_single_reward_ship_to_text', 'wf_single_custom_reward_ship_to_tex
 
 
 // Archive Campaign Filters
-
+ 
 function wf_archive_custom_backers_count_text() {
     return esc_html__( 'My Backers Count Text', 'wp-fundraising' );
 }

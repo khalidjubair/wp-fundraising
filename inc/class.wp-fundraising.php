@@ -84,7 +84,7 @@ if (!class_exists('WP_FundRaising')) {
             add_filter( 'woocommerce_add_cart_item', array($this, 'wf_save_user_funding_to_cookie'), 10, 3 ); //Filter cart item and save donation amount into cookir if product type fundraising
             add_action( 'woocommerce_before_calculate_totals', array($this, 'wf_add_user_funding')); //Save user input as there preferable amount with cart
             add_filter( 'woocommerce_add_to_cart_redirect', array($this, 'wf_redirect_to_checkout')); //Skip cart page after click Donate button, going directly on checkout page
-            add_filter( 'woocommerce_coupons_enabled', array($this, 'wf_wc_coupon_disable')); //Hide coupon form on checkout page
+            add_filter( 'woocommerce_coupons_enabled', 'WP_FundRaising::wf_wc_coupon_disable'); //Hide coupon form on checkout page
             add_filter( 'woocommerce_get_price_html', array($this, 'wf_wc_price_remove'), 10, 2 ); //Hide default price details
             add_filter( 'woocommerce_is_purchasable', array($this, 'wf_return_true_woocommerce_is_purchasable'), 10, 2 ); // Return true is purchasable
             add_filter( 'woocommerce_paypal_args', array($this, 'wf_custom_override_paypal_email'), 100, 1); // Override paypal reciever email address with campaign creator email
@@ -525,7 +525,7 @@ if (!class_exists('WP_FundRaising')) {
         /**
          * Disabled coupon system from system
          */
-        function wf_wc_coupon_disable( $coupons_enabled ) {
+        static function wf_wc_coupon_disable( $coupons_enabled ) {
             global $woocommerce;
             return false;
         }

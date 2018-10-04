@@ -16,6 +16,7 @@ $donation_level_fields = get_post_meta($campaign_id, 'repeatable_donation_level_
 
     
     ?>
+    
     <?php if ( $donation_level_fields ) : ?>
         <div class="xs-input-group">
             <label for="xs-donate-charity-amount-form"><?php esc_html_e('List of Donation Level','wp-fundraising');?> <span class="color-light-red" >**</span></label>
@@ -39,9 +40,9 @@ $donation_level_fields = get_post_meta($campaign_id, 'repeatable_donation_level_
             <div class="form-inline">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <div class="input-group-text">$</div>
+                        <div class="input-group-text"><?php echo get_woocommerce_currency_symbol(); ?></div>
                     </div>
-                    <input type="number" name="wp_donate_amount_field" min="1" class="form-control" id="inlineFormInputGroup" placeholder="Amount">
+                    <input type="number" name="wp_donate_amount_field" min="1" class="form-control" id="inlineFormInputGroup" placeholder="<?php esc_attr_e('Amount','wp_fundraising'); ?>">
                 </div>
                 <div class="select-amaunt-group">
                     <span><?php esc_html_e('Select Amount:','wp-fundraising');?></span>

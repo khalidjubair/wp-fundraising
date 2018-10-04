@@ -201,8 +201,8 @@ $grid = 12/$cols;
                 </ul>
                 <a href="<?php the_permalink();?>" class="xs-post-title"><?php the_title();?></a>
                 <ul class="xs-list-with-content">
-                    <li><strong><i class="icon-consult"></i><?php esc_html_e('Goal:','wp-fundraising');?></strong><span><?php echo wc_price($funding_goal); ?></span></li>
-                    <li><strong><i class="icon-chart22"></i><?php esc_html_e('Raised:','wp-fundraising');?></strong><span><?php echo wc_price($raised); ?></span></li>
+                    <li><strong><i class="icon-consult"></i><?php echo wf_archive_fund_goal_text(); ?></strong><span><?php echo wc_price($funding_goal); ?></span></li>
+                    <li><strong><i class="icon-chart22"></i><?php echo wf_archive_fund_raised_text(); ?></strong><span><?php echo wc_price($raised); ?></span></li>
                 </ul>
                 <div class="xs-skill-bar">
                     <div class="xs-skill-track">
