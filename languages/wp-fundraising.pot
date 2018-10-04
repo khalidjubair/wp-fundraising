@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Fundraising - Donation and Crowdfunding Platform\n"
-"POT-Creation-Date: 2018-09-13 12:26+0600\n"
-"PO-Revision-Date: 2018-09-13 12:25+0600\n"
+"POT-Creation-Date: 2018-10-04 14:35+0600\n"
+"PO-Revision-Date: 2018-10-04 14:34+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -134,7 +134,7 @@ msgid "4 Column"
 msgstr ""
 
 #: inc/builder-support/elementor/wf-campaigns.php:87
-#: templates/shortcode-submit-form.php:116
+#: templates/shortcode-submit-form.php:127
 msgid "Category"
 msgstr ""
 
@@ -385,13 +385,13 @@ msgstr ""
 #: inc/class.wp-fundraising.php:303 inc/class.wp-fundraising.php:304
 #: templates/dashboard/address.php:90 templates/dashboard/address.php:151
 #: templates/dashboard/address.php:217 templates/dashboard/address.php:291
-#: templates/shortcode-submit-form.php:306
+#: templates/shortcode-submit-form.php:317
 msgid "Country"
 msgstr ""
 
 #: inc/class.wp-fundraising-donation.php:199
 #: inc/class.wp-fundraising-donation.php:200 inc/class.wp-fundraising.php:314
-#: inc/class.wp-fundraising.php:315 templates/shortcode-submit-form.php:329
+#: inc/class.wp-fundraising.php:315 templates/shortcode-submit-form.php:340
 msgid "Location"
 msgstr ""
 
@@ -403,8 +403,8 @@ msgstr ""
 #: inc/class.wp-fundraising-donation.php:309
 #: inc/class.wp-fundraising-donation.php:328 inc/class.wp-fundraising.php:672
 #: inc/class.wp-fundraising.php:712 inc/class.wp-fundraising.php:751
-#: templates/shortcode-submit-form.php:403
-#: templates/shortcode-submit-form.php:493
+#: templates/shortcode-submit-form.php:414
+#: templates/shortcode-submit-form.php:504
 msgid "Pledge Amount"
 msgstr ""
 
@@ -425,8 +425,8 @@ msgstr ""
 #: inc/class.wp-fundraising-donation.php:339 inc/class.wp-fundraising.php:703
 #: inc/class.wp-fundraising.php:743 inc/class.wp-fundraising.php:782
 #: inc/class.wp-fundraising.php:892 inc/class.wp-fundraising.php:916
-#: inc/class.wp-fundraising.php:939 templates/shortcode-submit-form.php:478
-#: templates/shortcode-submit-form.php:567
+#: inc/class.wp-fundraising.php:939 templates/shortcode-submit-form.php:489
+#: templates/shortcode-submit-form.php:578
 msgid "Remove"
 msgstr ""
 
@@ -540,40 +540,40 @@ msgid "This campaign has been end"
 msgstr ""
 
 #: inc/class.wp-fundraising.php:676 inc/class.wp-fundraising.php:716
-#: inc/class.wp-fundraising.php:755 templates/shortcode-submit-form.php:412
-#: templates/shortcode-submit-form.php:502
+#: inc/class.wp-fundraising.php:755 templates/shortcode-submit-form.php:423
+#: templates/shortcode-submit-form.php:513
 msgid "Reward Title"
 msgstr ""
 
 #: inc/class.wp-fundraising.php:680 inc/class.wp-fundraising.php:720
-#: inc/class.wp-fundraising.php:759 templates/shortcode-submit-form.php:422
-#: templates/shortcode-submit-form.php:512
+#: inc/class.wp-fundraising.php:759 templates/shortcode-submit-form.php:433
+#: templates/shortcode-submit-form.php:523
 msgid "Reward Description"
 msgstr ""
 
 #: inc/class.wp-fundraising.php:684 inc/class.wp-fundraising.php:724
-#: inc/class.wp-fundraising.php:763 templates/shortcode-submit-form.php:432
-#: templates/shortcode-submit-form.php:434
-#: templates/shortcode-submit-form.php:522
-#: templates/shortcode-submit-form.php:524
+#: inc/class.wp-fundraising.php:763 templates/shortcode-submit-form.php:443
+#: templates/shortcode-submit-form.php:445
+#: templates/shortcode-submit-form.php:533
+#: templates/shortcode-submit-form.php:535
 msgid "Additional Reward Offer"
 msgstr ""
 
 #: inc/class.wp-fundraising.php:688 inc/class.wp-fundraising.php:728
-#: inc/class.wp-fundraising.php:767 templates/shortcode-submit-form.php:445
-#: templates/shortcode-submit-form.php:535
+#: inc/class.wp-fundraising.php:767 templates/shortcode-submit-form.php:456
+#: templates/shortcode-submit-form.php:546
 msgid "Estimated Delivery Date"
 msgstr ""
 
 #: inc/class.wp-fundraising.php:692 inc/class.wp-fundraising.php:732
-#: inc/class.wp-fundraising.php:771 templates/shortcode-submit-form.php:457
-#: templates/shortcode-submit-form.php:547
+#: inc/class.wp-fundraising.php:771 templates/shortcode-submit-form.php:468
+#: templates/shortcode-submit-form.php:558
 msgid "Quantity"
 msgstr ""
 
 #: inc/class.wp-fundraising.php:696 inc/class.wp-fundraising.php:736
-#: inc/class.wp-fundraising.php:775 templates/shortcode-submit-form.php:470
-#: templates/shortcode-submit-form.php:559
+#: inc/class.wp-fundraising.php:775 templates/shortcode-submit-form.php:481
+#: templates/shortcode-submit-form.php:570
 msgid "Ships To"
 msgstr ""
 
@@ -607,7 +607,8 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
-#: inc/config/class.menu-settings.php:32 templates/shortcode-submit-form.php:89
+#: inc/config/class.menu-settings.php:32
+#: templates/shortcode-submit-form.php:100
 msgid "General Options"
 msgstr ""
 
@@ -1431,7 +1432,7 @@ msgstr ""
 #: libs/wp-fundraising-frontend-filters-list.php:124
 #: libs/wp-fundraising-frontend-filters-list.php:129
 #: templates/shortcode-dashboard.php:94 templates/shortcode-login-btn.php:10
-#: templates/shortcode-submit-form.php:608
+#: templates/shortcode-submit-form.php:619
 msgid "Log In"
 msgstr ""
 
@@ -1450,14 +1451,6 @@ msgstr ""
 #: templates/content-campaign-listing.php:127
 #: templates/content-campaign-listing.php:169
 msgid "By"
-msgstr ""
-
-#: templates/content-campaign-listing.php:204
-msgid "Goal:"
-msgstr ""
-
-#: templates/content-campaign-listing.php:205
-msgid "Raised:"
 msgstr ""
 
 #: templates/content-donate-form.php:12
@@ -1679,7 +1672,7 @@ msgstr ""
 msgid "Address"
 msgstr ""
 
-#: templates/shortcode-dashboard.php:94 templates/shortcode-submit-form.php:608
+#: templates/shortcode-dashboard.php:94 templates/shortcode-submit-form.php:619
 msgid "Please "
 msgstr ""
 
@@ -1691,228 +1684,240 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:29
+#: templates/shortcode-submit-form.php:15
+msgid "You've created campaign successfully!"
+msgstr ""
+
+#: templates/shortcode-submit-form.php:16
+msgid "Create Another One"
+msgstr ""
+
+#: templates/shortcode-submit-form.php:17
+msgid "Go back to home"
+msgstr ""
+
+#: templates/shortcode-submit-form.php:40
 msgid "You are not allowed to access this page."
 msgstr ""
 
-#: templates/shortcode-submit-form.php:30
+#: templates/shortcode-submit-form.php:41
 msgid "Want to create a brand new campaign?"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:30
+#: templates/shortcode-submit-form.php:41
 msgid "Click Here"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:92
+#: templates/shortcode-submit-form.php:103
 msgid "Reward Options"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:101
+#: templates/shortcode-submit-form.php:112
 msgid "Title"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:104
+#: templates/shortcode-submit-form.php:115
 msgid "Put the campaign title here"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:118
+#: templates/shortcode-submit-form.php:129
 msgid "Select your campaign category"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:136
-#: templates/shortcode-submit-form.php:140
+#: templates/shortcode-submit-form.php:147
+#: templates/shortcode-submit-form.php:151
 msgid "Tag"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:138
+#: templates/shortcode-submit-form.php:149
 msgid "Separate tags with commas eg: tag1,tag2"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:147
+#: templates/shortcode-submit-form.php:158
 msgid "Image"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:149
+#: templates/shortcode-submit-form.php:160
 msgid "Upload a campaign feature image"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:161
+#: templates/shortcode-submit-form.php:172
 msgid "Video"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:163
+#: templates/shortcode-submit-form.php:174
 msgid "Put the campaign video URL here"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:166
+#: templates/shortcode-submit-form.php:177
 msgid "https://"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:176
+#: templates/shortcode-submit-form.php:187
 msgid "Start Date"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:178
+#: templates/shortcode-submit-form.php:189
 msgid "Campaign start date (dd-mm-yy)"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:186
+#: templates/shortcode-submit-form.php:197
 msgid "Funding Goal "
 msgstr ""
 
-#: templates/shortcode-submit-form.php:188
+#: templates/shortcode-submit-form.php:199
 msgid "Campaign funding goal"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:196
+#: templates/shortcode-submit-form.php:207
 msgid "Minimum Amount"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:198
+#: templates/shortcode-submit-form.php:209
 msgid "Minimum campaign funding amount"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:206
+#: templates/shortcode-submit-form.php:217
 msgid "Recomended Amount"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:209
+#: templates/shortcode-submit-form.php:220
 msgid "Recommended campaign funding amount"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:219
+#: templates/shortcode-submit-form.php:230
 msgid "Contributor Table"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:223
+#: templates/shortcode-submit-form.php:234
 msgid "Show contributor table on campaign single page"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:234
+#: templates/shortcode-submit-form.php:245
 msgid "End Date"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:236
+#: templates/shortcode-submit-form.php:247
 msgid "Campaign end date (dd-mm-yy)"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:243
+#: templates/shortcode-submit-form.php:254
 msgid "End Method"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:245
+#: templates/shortcode-submit-form.php:256
 msgid "Choose the stage when campaign will end"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:251
+#: templates/shortcode-submit-form.php:262
 msgid "Target Goal"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:255
+#: templates/shortcode-submit-form.php:266
 msgid "Target Date"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:259
+#: templates/shortcode-submit-form.php:270
 msgid "Target Goal & Date"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:264
+#: templates/shortcode-submit-form.php:275
 msgid "Campaign Never Ends"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:272
+#: templates/shortcode-submit-form.php:283
 msgid "Maximum Amount"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:274
+#: templates/shortcode-submit-form.php:285
 msgid "Maximum campaign funding amount"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:281
+#: templates/shortcode-submit-form.php:292
 msgid "Predefined Pledge Amount"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:283
+#: templates/shortcode-submit-form.php:294
 msgid "Predefined amount allow you to place the amount you donate box by click"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:292
+#: templates/shortcode-submit-form.php:303
 msgid "Contributor Anonymity"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:295
+#: templates/shortcode-submit-form.php:306
 msgid "Make contributors anonymous on the contributor table"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:308
+#: templates/shortcode-submit-form.php:319
 msgid "Select your country"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:331
+#: templates/shortcode-submit-form.php:342
 msgid "Put the campaign location here"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:343
+#: templates/shortcode-submit-form.php:354
 msgid "Short Description"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:345
+#: templates/shortcode-submit-form.php:356
 msgid "Put the campaign short description here"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:355
+#: templates/shortcode-submit-form.php:366
 msgid "Description"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:357
+#: templates/shortcode-submit-form.php:368
 msgid "Put the campaign description here"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:405
-#: templates/shortcode-submit-form.php:495
+#: templates/shortcode-submit-form.php:416
+#: templates/shortcode-submit-form.php:506
 msgid "Enter Pledge amount"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:414
-#: templates/shortcode-submit-form.php:504
+#: templates/shortcode-submit-form.php:425
+#: templates/shortcode-submit-form.php:515
 msgid "Enter  Reward Title"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:424
-#: templates/shortcode-submit-form.php:514
+#: templates/shortcode-submit-form.php:435
+#: templates/shortcode-submit-form.php:525
 msgid "Enter Reward description"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:447
-#: templates/shortcode-submit-form.php:537
+#: templates/shortcode-submit-form.php:458
+#: templates/shortcode-submit-form.php:548
 msgid "Estimated delivery Date of the Reward (dd-mm-yy)"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:459
-#: templates/shortcode-submit-form.php:549
+#: templates/shortcode-submit-form.php:470
+#: templates/shortcode-submit-form.php:560
 msgid "Enter Quantity of physical products"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:472
-#: templates/shortcode-submit-form.php:561
+#: templates/shortcode-submit-form.php:483
+#: templates/shortcode-submit-form.php:572
 msgid "Enter Ships To"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:481
-#: templates/shortcode-submit-form.php:570
+#: templates/shortcode-submit-form.php:492
+#: templates/shortcode-submit-form.php:581
 msgid "Add more"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:587
+#: templates/shortcode-submit-form.php:598
 msgctxt "wp-fundraising"
 msgid "I agree with <a href='"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:593
+#: templates/shortcode-submit-form.php:604
 msgid "Submit"
 msgstr ""
 
-#: templates/shortcode-submit-form.php:608
+#: templates/shortcode-submit-form.php:619
 msgid " to create a campaign"
 msgstr ""
 
