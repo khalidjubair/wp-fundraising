@@ -2583,8 +2583,10 @@ h1#ps_login_success a:hover {
     box-shadow: 0.523px 9.986px 43.61px 5.39px rgba(0, 0, 0, 0.05);}
 .xs-campaign-info-card:last-child {
     margin-bottom: 0; }
-.xs-campaign-info-card .dashboard-title {
-    font-size: 1.42857em;
+.xs-campaign-info-card .dashboard-title,
+.xs-campaign-info-card .dashboard-title a {
+    font-size: 1.42857rem;
+    color: #011b58;
     padding-top: 0; }
 .xs-campaign-info-card .xs-dashboard-header {
     margin-bottom: 30px; }

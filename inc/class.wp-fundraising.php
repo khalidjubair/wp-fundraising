@@ -167,6 +167,16 @@ if (!class_exists('WP_FundRaising')) {
             );
             woocommerce_wp_text_input(
                 array(
+                    'id'            => '_wf_roi',
+                    'label'         => esc_html__( 'ROI (%)', 'wp-fundraising' ),
+                    'placeholder'   => esc_attr__( 'ROI','wp-fundraising' ),
+                    'description'   => esc_html__('Enter the ROI', 'wp-fundraising' ),
+                    'desc_tip'      => true,
+                    'type' 			=> 'text',
+                )
+            );
+            woocommerce_wp_text_input(
+                array(
                     'id'            => '_wf_duration_start',
                     'label'         => esc_html__( 'Start date- mm/dd/yyyy or dd-mm-yyyy', 'wp-fundraising' ),
                     'placeholder'   => esc_attr__( 'Start time of this campaign', 'wp-fundraising' ),
@@ -335,6 +345,9 @@ if (!class_exists('WP_FundRaising')) {
 
             if (isset($_POST['_wf_funding_goal'])) :
                 update_post_meta($post_id, '_wf_funding_goal', sanitize_text_field($_POST['_wf_funding_goal']));
+            endif;
+            if (isset($_POST['_wf_roi'])) :
+                update_post_meta($post_id, '_wf_roi', sanitize_text_field($_POST['_wf_roi']));
             endif;
 
             if (isset($_POST['_wf_duration_start'])) :

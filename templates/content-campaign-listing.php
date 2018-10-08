@@ -15,6 +15,7 @@ $wp_country  = get_post_meta( get_the_ID(), '_wf_country', true);
 $total_sales    = get_post_meta( get_the_ID(), 'total_sales', true );
 $enddate        = get_post_meta( get_the_ID(), '_wf_duration_end', true );
 $show_end_date = wf_get_option('_wf_hide_campaign_expiry_from_listing', 'wf_basics');
+$roi = get_post_meta( get_the_ID(), '_wf_roi', true );
 
 $short_description = apply_filters( 'woocommerce_short_description', get_the_excerpt() );
 
@@ -72,8 +73,8 @@ $grid = 12/$cols;
                 </ul>
                 <a href="<?php the_permalink();?>" class="d-block color-navy-blue fundpress-post-title"><?php the_title();?></a>
                 <ul class="xs-list-with-content fundpress-list-item-content">
-                    <?php if ($funding_goal) { ?>
-                        <li><?php echo wc_price($funding_goal); ?><span><?php echo wf_archive_fund_goal_text(); ?></span></li>
+                    <?php if ($roi) { ?>
+                        <li><?php echo $roi; ?><span>Annualized ROI</span></li>
                     <?php } ?>
 
                     <?php if ($raised) { ?>
@@ -106,7 +107,7 @@ $grid = 12/$cols;
             <div class="fundpress-item-header">
                 <a href="<?php the_permalink();?>"><img src="<?php echo $image_link; ?>" alt=""></a>
                 <div class="xs-item-header-content">
-                    <span class="badge badge-sm badge-v1 badge-pill badge-primary"><?php echo wc_price($funding_goal); ?></span>
+                    <span class="badge badge-sm badge-v1 badge-pill badge-primary"><?php echo $roi; ?><span>Annualized ROI</span></span>
                 </div>
             </div>
 
@@ -201,7 +202,9 @@ $grid = 12/$cols;
                 </ul>
                 <a href="<?php the_permalink();?>" class="xs-post-title"><?php the_title();?></a>
                 <ul class="xs-list-with-content">
-                    <li><strong><i class="icon-consult"></i><?php echo wf_archive_fund_goal_text(); ?></strong><span><?php echo wc_price($funding_goal); ?></span></li>
+                    <?php if($roi): ?>
+                        <li><strong><i class="icon-consult"></i>Annualized ROI</strong><span><?php echo $roi; ?>%</span></li>
+                    <?php endif; ?>
                     <li><strong><i class="icon-chart22"></i><?php echo wf_archive_fund_raised_text(); ?></strong><span><?php echo wc_price($raised); ?></span></li>
                 </ul>
                 <div class="xs-skill-bar">

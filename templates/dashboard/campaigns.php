@@ -46,7 +46,7 @@ if ( $the_query->have_posts() ) :
         ?>
         <div class="xs-campaign-info-card">
             <div class="xs-dashboard-header">
-                <h3 class="dashboard-title"><?php echo get_the_title(); ?> <span><?php esc_html_e('by','wp-fundraising');?> <?php echo get_the_author();?></span></h3>
+                <h3 class="dashboard-title"><a href="<?php the_permalink();?>" ><?php echo get_the_title(); ?></a> <span><?php esc_html_e('by','wp-fundraising');?> <?php echo get_the_author();?></span></h3>
                 <div class="xs-btn-wraper">
                     <a target="_blank" href="<?php echo home_url('/')?>wf-campaign-form/?action=edit&campaign_id=<?php the_ID();?>" class="btn btn-outline-success"><?php esc_html_e('Edit','wp-fundraising');?></a>
                     <a href="<?php the_permalink();?>" class="btn btn-outline-success"><?php esc_html_e('View','wp-fundraising');?></a>

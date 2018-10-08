@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 global $post;
 $funding_goal   = wf_get_total_goal_by_campaign($post->ID);
 
+$roi = get_post_meta( get_the_ID(), '_wf_roi', true );
 $raised = 0;
 $total_raised = wf_get_total_fund_raised_by_campaign($post->ID);
 $backers_count = wf_backers_count($post->ID);
@@ -23,7 +24,11 @@ if ($total_raised){
         <?php } ?>
 
         <?php if ( $backers_count > 0 ) { ?>
-            <li class="color-brick-light-2 bold"><?php echo $backers_count; ?><span class="color-semi-black regular"><?php echo wf_single_backers_count_text(); ?></span></li>
+            <li class="color-brick-light-2 bold xs-mb-20"><?php echo $backers_count; ?><span class="color-semi-black regular"><?php echo wf_single_backers_count_text(); ?></span></li>
+        <?php } ?>
+
+        <?php if ( $roi ) { ?>
+            <li class="color-brick-light-2 bold"><?php echo $roi; ?>%<span class="color-semi-black regular">Annualized ROI</span></li>
         <?php } ?>
 
     </ul>
