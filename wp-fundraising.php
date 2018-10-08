@@ -33,3 +33,15 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
         $WP_FundRaising_Donation = WP_FundRaising_Donation::wf_donation_get_instance();
     }
 }
+add_action( 'woocommerce_cart_calculate_fees', 'wf_check_total' );
+
+function wf_check_total( $cart_subtotal ) {
+    
+    $cart_subtotal = WC()->cart->get_cart_contents_total();
+
+    $fee = 5;
+    $fees = ($cart_subtotal * $fee)/100;
+
+    WC()->cart->add_fee( 'Small Order Fee', $fees, $taxable = false,'');
+
+}
