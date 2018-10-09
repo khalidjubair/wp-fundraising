@@ -74,7 +74,7 @@ $grid = 12/$cols;
                 <a href="<?php the_permalink();?>" class="d-block color-navy-blue fundpress-post-title"><?php the_title();?></a>
                 <ul class="xs-list-with-content fundpress-list-item-content">
                     <?php if ($roi) { ?>
-                        <li><?php echo $roi; ?><span>Annualized ROI</span></li>
+                        <li><?php echo $roi; ?>% <span> Annualized ROI</span></li>
                     <?php } ?>
 
                     <?php if ($raised) { ?>
@@ -107,7 +107,7 @@ $grid = 12/$cols;
             <div class="fundpress-item-header">
                 <a href="<?php the_permalink();?>"><img src="<?php echo $image_link; ?>" alt=""></a>
                 <div class="xs-item-header-content">
-                    <span class="badge badge-sm badge-v1 badge-pill badge-primary"><?php echo $roi; ?><span>Annualized ROI</span></span>
+                    <span class="badge badge-sm badge-v1 badge-pill badge-primary"><?php echo $roi; ?>% <span> Annualized ROI</span></span>
                 </div>
             </div>
 
