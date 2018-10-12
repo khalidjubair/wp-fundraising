@@ -21,7 +21,7 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
     }else{
         global $post;
         $title = $campaign_goal = $description = $short_description  = $minimum_amount = $maximum_amount = $category = $tag = $image_id = $video = $start_date = '';
-        $end_date = $recomended_amount = $countries = $country = $location = $type  = $image_url = '';
+        $end_date = $recomended_amount = $countries = $country = $location = $type  = $image_url = $roi = '';
         $campaign_end_method = $campaign_contributor_table = $contributor_show = $campaign_country = $estimated_date = $campaign_location = '';
         $checked = $checked2 = '';
         $campaign_reward_offer = '';
@@ -71,6 +71,7 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
                             $maximum_amount      = get_post_meta( get_the_ID(), '_wf_funding_minimum_amount', true );
                             $recomended_amount   = get_post_meta( get_the_ID(), '_wf_funding_recommended_price', true );
                             $campaign_goal       = get_post_meta( get_the_ID(), '_wf_funding_goal', true );
+                            $roi       = get_post_meta( get_the_ID(), '_wf_roi', true );
                             $campaign_end_method = get_post_meta(get_the_ID(), '_wf_campaign_end_method', true);
                             $campaign_contributor_table = get_post_meta( get_the_ID(), '_wf_show_contributor_table', true );
                             $contributor_show   = get_post_meta( get_the_ID(), '_wf_mark_contributors_as_anonymous', true );
@@ -199,6 +200,15 @@ function wp_fundraising_campaign_form_shortcode( $atts ){
             $html .= '<p>' . esc_html__("Campaign funding goal", "wp-fundraising") . '</p>';
             $html .= '</div>';
             $html .= '<input type="text" class="form-control" name="wf_campaign_goal" id="campaign_goal" value="'.$campaign_goal.'">';
+            $html .= '</div>';
+    
+            //Funding Goal
+            $html .= '<div class="form-group">';
+            $html .= '<span class="h3">' . esc_html__("ROI ", "wp-fundraising") . '</span>';
+            $html .= '<div class="help-tip">';
+            $html .= '<p>' . esc_html__("Return of Investment", "wp-fundraising") . '</p>';
+            $html .= '</div>';
+            $html .= '<input type="text" class="form-control" name="wf_roi" id="roi" value="'.$roi.'">';
             $html .= '</div>';
     
             if (wf_get_option('_wf_hide_min_price', 'wf_basics') != "on") {

@@ -25,7 +25,7 @@ if (! class_exists('WP_Fundraising_Frontend_Campaign_Submit_Form')) {
 
                 $title = $campaign_goal = $description = $short_description  = $campaign_predefined_amount = $category = $tag = $image_id = $video = $start_date = '';
                 $end_date = $min_price = $max_price = $recommended_price = $type = '';
-                $campaign_end_method = $campaign_contributor_table = $campaign_contributor_show = $campaign_country = $campaign_location = '';
+                $campaign_end_method = $campaign_contributor_table = $campaign_contributor_show = $campaign_country = $campaign_location = $roi = '';
 
                 if ( empty($_POST['wp_fundraising_terms_agree'])){
                     die(json_encode(array('success'=> 0, 'message' => esc_html__('Please check terms condition', 'wp-fundraising'))));
@@ -60,6 +60,9 @@ if (! class_exists('WP_Fundraising_Frontend_Campaign_Submit_Form')) {
                 }
                 if ($_POST['wf_campaign_goal']) {
                     $campaign_goal = sanitize_text_field($_POST['wf_campaign_goal']);
+                }
+                if ($_POST['wf_roi']) {
+                    $roi = sanitize_text_field($_POST['wf_roi']);
                 }
                 if ($_POST['wf_campaign_min_amount']) {
                     $min_price = sanitize_text_field($_POST['wf_campaign_min_amount']);
@@ -180,6 +183,7 @@ if (! class_exists('WP_Fundraising_Frontend_Campaign_Submit_Form')) {
 
                     update_post_meta($campaign_id, '_wf_funding_video', $video);
                     update_post_meta($campaign_id, '_wf_funding_goal', $campaign_goal);
+                    update_post_meta($campaign_id, '_wf_roi', $roi);
                     update_post_meta($campaign_id, '_wf_duration_start', $start_date);
                     update_post_meta($campaign_id, '_wf_duration_end', $end_date);
                     update_post_meta($campaign_id, '_wf_funding_minimum_price', $min_price);
