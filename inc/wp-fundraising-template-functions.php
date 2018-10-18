@@ -64,6 +64,7 @@ if ( ! function_exists('wf_get_campaigns_location')){
         }
         if ($xs_product->get_type() == 'wp_fundraising'){
             $wp_country = get_post_meta($post->ID, '_wf_country', true);
+            
             $location = get_post_meta($post->ID, '_wf_location', true);
         }elseif ($xs_product->get_type() == 'wf_donation'){
             $wp_country = get_post_meta($post->ID, '_wfd_country', true);
