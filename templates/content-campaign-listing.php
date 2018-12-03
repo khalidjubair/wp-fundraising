@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <?php
-
+ 
 
 $funding_goal   = wf_get_total_goal_by_campaign(get_the_ID());
 $raised_percent   = wf_get_fund_raised_percent(get_the_ID());
@@ -183,7 +183,10 @@ $grid = 12/$cols;
             </div>
         </div>
 
-    <?php }else{ ?> 
+    <?php }elseif($args['style'] == "4"){
+
+?>
+
         <div class="xs-popular-item">
             <div class="xs-item-header">
                 <img src="<?php echo $image_link; ?>" alt="img">
@@ -223,6 +226,62 @@ $grid = 12/$cols;
                             <a href="<?php echo get_the_author_link();?>"><?php echo get_the_author(); ?></a>
                         </div>
                         <?php endif; ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+<?php
+
+
+    }else{ ?> 
+        <div class="xs-popular-item xs-popular-item-5">
+            <div class="xs-item-header">
+                <img src="<?php echo $image_link; ?>" alt="img">
+                <?php
+                $categories = get_the_terms( get_the_ID(), 'product_cat' );
+                ?>
+                <ul class="xs-simple-tag">
+                    <?php
+                    foreach($categories as $category){
+                        ?><li><a href="<?php echo get_category_link($category->term_id);?>"><?php echo $category->name; ?></a></li><?php
+                    }
+                    ?>
+                </ul>
+            </div>
+            <div class="xs-item-content">
+                
+                <a href="<?php the_permalink();?>" class="xs-post-title"><?php the_title();?></a>
+                <ul class="xs-list-with-content">
+                    <li><strong><i class="icon-consult"></i><?php echo wf_archive_fund_goal_text(); ?></strong><span><?php echo wc_price($funding_goal); ?></span></li>
+                    <li><strong><i class="icon-chart22"></i><?php echo wf_archive_fund_raised_text(); ?></strong><span><?php echo wc_price($raised); ?></span></li>
+                </ul>
+                <div class="xs-skill-bar">
+                    <div class="xs-skill-track">
+                        <p><span class="number-percentage-count number-percentage" data-value="<?php echo $raised_percent; ?>" data-animation-duration="3500">0</span>%</p>
+                    </div>
+                </div>
+                <?php if($args['author'] == 'yes'){ ?>
+                    <div class="media">
+                    <?php
+                        $user = wp_get_current_user();
+
+                        if ( $user ) : ?>
+                        
+                        <div class="xs-round-avatar">
+                        <?php echo get_avatar( get_the_author_meta( 'ID' ), 100 );?>
+                        </div>
+                        <div class="xs-avatar-title">
+                            <a href="<?php echo get_the_author_link();?>"><?php echo get_the_author(); ?></a>
+                        </div>
+                        <?php endif; ?>
+
+
+
+                        <div class="media-body text-right">
+                            
+                            <a href="<?php the_permalink();?>" class="btn btn-secondary"><?php esc_html_e('Donate Now', 'wp-fundraising');?></a>
+    
+                        </div>
                     </div>
                 <?php } ?>
             </div>

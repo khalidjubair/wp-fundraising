@@ -2932,3 +2932,113 @@ h5.auth_success{
 .xs-list-with-content.fundpress-simple-list-content {
     display: block;
 }
+
+
+/* style orange */
+.xs-popular-item-5 {
+    
+}
+.xs-popular-item-5 .xs-item-content {
+    border: 1px solid #efefef;
+    border-top: 0px;
+}
+
+.xs-popular-item-5 .xs-list-with-content {
+    display: block;
+        margin-top: 17px;
+    margin-bottom: 42px;
+}
+
+.xs-popular-item-5 .xs-list-with-content li {
+    display: inline-block;
+    max-width: unset;
+    margin-right: 20px;
+    font-size: 1em;
+    color: #2b3539;
+}
+
+.xs-popular-item-5 .xs-list-with-content li:last-child {
+    margin-right: 0px;
+}
+
+.xs-popular-item-5 .xs-list-with-content li span {
+    display: inline-block;
+    color: #f57223;
+}
+
+.xs-popular-item-5 .xs-list-with-content li i {
+    padding-right: 8px;
+}
+.xs-popular-item-5 .xs-skill-bar {
+    background-color: #efefef;
+    height: 15px;
+    border-radius: 7.5px;
+    margin-bottom: 40px;
+}
+.xs-popular-item-5 .xs-skill-bar .xs-skill-track {
+    background-color: #f05d19 !important;
+    height: 9px;
+    border-radius: 4.5px;
+    top: 3px;
+    left: 3px;
+}
+.xs-popular-item-5 .xs-skill-bar .xs-skill-track p {
+    background-color: #f05d19 !important;
+        border-radius: 0px;
+    height: 18px;
+    width: 33px;
+    top: -20px;
+}
+.xs-popular-item-5 .xs-skill-bar .xs-skill-track p:before {
+    position: absolute;
+    content: "";
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #f05d19;
+}
+
+.xs-popular-item-5 .btn {
+        background-color: transparent;
+    color: #f05d19;
+    border: 1px solid currentColor;
+    padding: 11px 19px;
+}
+.xs-popular-item-5 .btn-secondary:hover:before, .xs-popular-item-5 .btn-secondary:hover:after {
+    background-color: #f05d19;
+    }
+    
+.xs-popular-item-5  .xs-item-header {
+    position: relative;
+}
+
+.xs-popular-item-5 .xs-simple-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    z-index: 10;
+    margin-bottom: 0;
+}
+.xs-popular-item-5 .xs-simple-tag li a {
+    background-color: #f05d19;
+    color: #FFFF !important;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    border-radius: 3px;
+        left: -8px;
+        
+    position: relative;
+}
+.xs-popular-item-5 .xs-simple-tag li a:before {
+    position: absolute;
+    content: "";
+    bottom: -7px;
+    left: -8px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid #f57223;
+    border-bottom: 8px solid transparent;
+}

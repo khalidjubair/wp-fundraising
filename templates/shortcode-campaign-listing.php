@@ -96,7 +96,8 @@ function wp_fundraising_listing_shortcode($atts = array()){
                                         'terms'     => $c_type,
                                     ),
                                 ),
-                                'posts_per_page' => -1
+                                'posts_per_page' => $args['number'],
+                                'paged' => $paged
                             );
                         }
                     }
@@ -192,7 +193,8 @@ function wp_fundraising_listing_shortcode($atts = array()){
                                 'terms'     => $c_type,
                             ),
                         ),
-                        'posts_per_page' => -1
+                        'posts_per_page' => $args['number'],
+                        'paged' => $paged
                     );
                 }
             }
@@ -221,6 +223,7 @@ function wp_fundraising_listing_shortcode($atts = array()){
                             include WP_FUNDRAISING_DIR_PATH.'templates/content-campaign-listing.php';
                         endif;
                     endwhile; ?>
+                    <?php wf_paging_nav(); ?>
                 </div>
             <?php
             else:

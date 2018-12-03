@@ -54,6 +54,7 @@ class WF_Campaigns_Widget extends Widget_Base {
                     '2'     => esc_html__( 'style 2', 'wp-fundraising' ),
                     '3'     => esc_html__( 'style 3', 'wp-fundraising' ),
                     '4'     => esc_html__( 'style 4', 'wp-fundraising' ),
+                    '5'     => esc_html__( 'style 5', 'wp-fundraising' ),
                 ],
             ]
         );
